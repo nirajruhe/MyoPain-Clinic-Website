@@ -75,6 +75,15 @@ Last Updated: October 03, 2026
   - **Dynamic Reset:** Automatically resets slider positions whenever patients select different services.
 - **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
 
+## 1G. Custom Domain SSL/TLS Certificate & HTTPS Enforcement (October 03, 2026)
+- **Problem Solved:** When visiting `https://myopainphysiowellness.in` on mobile Chrome, users encountered `NET::ERR_CERT_COMMON_NAME_INVALID` ("Your connection is not private") because GitHub Pages was serving its fallback `*.github.io` wildcard certificate before the custom domain TLS certificate was issued.
+- **Resolution:**
+  - Automated CNAME toggle via GitHub API triggered immediate Let's Encrypt certificate provisioning.
+  - Certificate status: **Approved & Active** (`state: approved`), covering both `myopainphysiowellness.in` and `www.myopainphysiowellness.in`, valid through January 01, 2027.
+  - Enabled **HTTPS Enforcement** (`https_enforced: true`).
+  - Automatic 301 redirection from HTTP to HTTPS and from `www` to apex domain.
+  - Verified live: Returns `HTTP 200 OK` with full browser trust and green lock.
+
 ## 1. Project Overview & Client Context
 - **Clinic Name:** MyoPain Physiotherapy & Wellness Clinic
 - **Client Skill Level:** Beginner (explain all technical actions in simple, plain English; no coding required from the user).
