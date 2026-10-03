@@ -60,6 +60,16 @@ Last Updated: October 03, 2026
 - **Isolation & Privacy Guarantee:** 100% isolated and independent. Completely unlinked from any other user accounts or external profiles (`gorky117-cell`), safeguarding proprietary intellectual property and patents.
 - **Repository Contents:** Complete production suite committed and live (Semantic HTML5 homepage with 6 verified Google reviews, modular CSS3 stylesheet, dynamic JavaScript, complete asset directory with all 12 photographic service cards, SEO discovery sitemap & robots, handover documentation, and professional README).
 
+## 1F. Mobile 1-Card Swipeable Sliders for Service Details (October 03, 2026)
+- **Problem Solved:** On smartphone screens, the 4 Condition cards and 4 Approach Pillar cards were previously stacked in a single vertical column, creating an exhausting 8-card vertical scroll.
+- **Solution Implemented:**
+  - **Desktop Experience Preserved:** Desktop screens (>640px) retain the exact same 4-column side-by-side grid with zero changes.
+  - **Mobile Only (<=640px):** Converted `.conditions-grid` and `.approach-pillars-grid` into smooth, native horizontal touch-swipeable carousels (`scroll-snap-type: x mandatory`).
+  - **Single Card View:** Each card spans 100% of the mobile viewport with hardware-accelerated snap alignment.
+  - **Slide Controls:** Added touch-friendly circular `←` / `→` arrow buttons and active progress indicator pills (`.slider-counter`) allowing users to easily tap or swipe through cards.
+  - **Dynamic Reset:** Automatically resets slider position to card 1 whenever a patient selects a different service from the top carousel.
+- **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
+
 ## 1. Project Overview & Client Context
 - **Clinic Name:** MyoPain Physiotherapy & Wellness Clinic
 - **Client Skill Level:** Beginner (explain all technical actions in simple, plain English; no coding required from the user).
