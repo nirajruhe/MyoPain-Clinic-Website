@@ -60,14 +60,19 @@ Last Updated: October 03, 2026
 - **Isolation & Privacy Guarantee:** 100% isolated and independent. Completely unlinked from any other user accounts or external profiles (`gorky117-cell`), safeguarding proprietary intellectual property and patents.
 - **Repository Contents:** Complete production suite committed and live (Semantic HTML5 homepage with 6 verified Google reviews, modular CSS3 stylesheet, dynamic JavaScript, complete asset directory with all 12 photographic service cards, SEO discovery sitemap & robots, handover documentation, and professional README).
 
-## 1F. Mobile 1-Card Swipeable Sliders for Service Details (October 03, 2026)
-- **Problem Solved:** On smartphone screens, the 4 Condition cards and 4 Approach Pillar cards were previously stacked in a single vertical column, creating an exhausting 8-card vertical scroll.
+## 1F. Mobile 1-Card Swipeable Sliders for All Multi-Card Sections (October 03, 2026)
+- **Problem Solved:** On smartphone and narrow screens, multiple stacked cards (Conditions, Approach Pillars, Journey steps, Team clinician profiles, and Patient Reviews) created exhausting, overwhelming vertical scrolling walls.
 - **Solution Implemented:**
-  - **Desktop Experience Preserved:** Desktop screens (>640px) retain the exact same 4-column side-by-side grid with zero changes.
-  - **Mobile Only (<=640px):** Converted `.conditions-grid` and `.approach-pillars-grid` into smooth, native horizontal touch-swipeable carousels (`scroll-snap-type: x mandatory`).
-  - **Single Card View:** Each card spans 100% of the mobile viewport with hardware-accelerated snap alignment.
-  - **Slide Controls:** Added touch-friendly circular `←` / `→` arrow buttons and active progress indicator pills (`.slider-counter`) allowing users to easily tap or swipe through cards.
-  - **Dynamic Reset:** Automatically resets slider position to card 1 whenever a patient selects a different service from the top carousel.
+  - **Desktop Experience 100% Preserved:** Desktop screens (>640px) retain their exact multi-column side-by-side grids (2-column, 3-column, and 4-column) with zero changes. Mobile arrow buttons and dot counters remain completely hidden (`display: none`).
+  - **Mobile Only (<=640px):** Converted all 5 multi-card content sections into smooth, native horizontal touch-swipeable carousels (`scroll-snap-type: x mandatory`):
+    1. **Conditions Treated:** `.conditions-grid` (4 condition cards, 4 dot pills, `←` / `→` arrows).
+    2. **Clinical Approach Pillars:** `.approach-pillars-grid` (4 clinical steps, 4 dot pills, `←` / `→` arrows).
+    3. **Patient Journey Pathway:** `.journey-timeline` (4 journey steps, 4 dot pills, `←` / `→` arrows).
+    4. **Clinical Team Profiles:** `.team-grid` (2 clinician cards: Dr. Neeraj & Dr. Shrishti, 2 dot pills, `←` / `→` arrows).
+    5. **Patient Reviews & Experiences:** `.reviews-grid` (6 verified Google reviews, 6 dot pills, `←` / `→` arrows).
+  - **Single Card Focus:** Each card spans 100% of the mobile viewport (`flex: 0 0 100%`) with hardware-accelerated snap alignment, preventing mobile user cognitive overload.
+  - **Unified Slide Controls:** Prominent 44px circular `←` / `→` arrow buttons and active progress indicator pills (`.slider-counter`) allow users to easily tap or swipe through items.
+  - **Dynamic Reset:** Automatically resets slider positions whenever patients select different services.
 - **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
 
 ## 1. Project Overview & Client Context

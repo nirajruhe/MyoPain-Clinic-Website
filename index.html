@@ -44,7 +44,7 @@
   <meta name="keywords" content="physiotherapy clinic, MyoPain physiotherapy, Dr Neeraj Ruhela, neuro rehabilitation, orthopedic physiotherapy, NIMHANS Bangalore, sports injury rehab, ISO 9001:2015 certified clinic, back pain treatment, cervical spondylosis, stroke rehab, geriatric physiotherapy">
 
   <!-- Primary Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3.6">
+  <link rel="stylesheet" href="style.css?v=3.7">
 
   <!-- Structured Data 1: Local Healthcare Clinic Schema (Google Rich Results) -->
   <script type="application/ld+json">
@@ -984,7 +984,7 @@
           </p>
         </div>
 
-        <div class="team-grid">
+        <div class="team-grid" id="teamGridTrack">
           <!-- Team Member 1: Dr. Neeraj Ruhela -->
           <article class="team-card">
             <div class="team-image-wrap">
@@ -1041,6 +1041,16 @@
             </div>
           </article>
         </div>
+
+        <!-- Mobile Slide Navigation for Team Members (Phone Only) -->
+        <div class="mobile-slider-controls mobile-only" id="teamMobileControls" aria-label="Team members navigation">
+          <button class="slider-arrow-btn" id="teamPrevBtn" type="button" aria-label="Previous team member">←</button>
+          <div class="slider-counter" id="teamCounter">
+            <span class="current-dot active" data-index="0"></span>
+            <span class="current-dot" data-index="1"></span>
+          </div>
+          <button class="slider-arrow-btn" id="teamNextBtn" type="button" aria-label="Next team member">→</button>
+        </div>
       </div>
     </section>
 
@@ -1059,7 +1069,7 @@
           <span><strong>5.0 Rating on Google Reviews</strong> · Verified Patient Testimonials</span>
         </div>
 
-        <div class="reviews-grid">
+        <div class="reviews-grid" id="reviewsGridTrack">
           <!-- Review 1: S GROUP GAMER -->
           <div class="review-placeholder-card">
             <div class="review-stars-row">
@@ -1656,6 +1666,6 @@
   </button>
 
   <!-- Client-Side JavaScript Logic -->
-  <script src="script.js?v=3.6"></script>
+  <script src="script.js?v=3.7"></script>
 </body>
 </html>

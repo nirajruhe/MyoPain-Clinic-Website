@@ -1701,6 +1701,13 @@ function initMobileCardSliders() {
   );
 
   setupSlider(
+    document.getElementById("teamGridTrack"),
+    document.getElementById("teamPrevBtn"),
+    document.getElementById("teamNextBtn"),
+    document.getElementById("teamCounter")
+  );
+
+  setupSlider(
     document.getElementById("reviewsGridTrack"),
     document.getElementById("reviewsPrevBtn"),
     document.getElementById("reviewsNextBtn"),

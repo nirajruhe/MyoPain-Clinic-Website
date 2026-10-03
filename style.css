@@ -2811,6 +2811,7 @@ em {
   .conditions-grid,
   .approach-pillars-grid,
   .journey-timeline,
+  .team-grid,
   .reviews-grid {
     display: flex !important;
     flex-direction: row !important;
@@ -2828,6 +2829,7 @@ em {
   .conditions-grid::-webkit-scrollbar,
   .approach-pillars-grid::-webkit-scrollbar,
   .journey-timeline::-webkit-scrollbar,
+  .team-grid::-webkit-scrollbar,
   .reviews-grid::-webkit-scrollbar {
     display: none !important;
   }
@@ -2835,6 +2837,7 @@ em {
   .condition-card,
   .approach-pillar-card,
   .journey-step-card,
+  .team-card,
   .review-placeholder-card {
     flex: 0 0 100% !important;
     min-width: 100% !important;
@@ -2847,10 +2850,6 @@ em {
   .details-cta-row .button {
     width: 100%;
     justify-content: center;
-  }
-
-  .team-grid {
-    grid-template-columns: 1fr;
   }
 
   .form-row {
