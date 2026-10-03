@@ -52,6 +52,14 @@ Last Updated: October 03, 2026
 - **Structural Integrity:** Retained the clean `.reviews-grid` (3-column desktop, 1-column mobile stack), 5-star rating displays (`★★★★★`), green `✓ Verified Google Review` badges, and avatar initials (`SG`, `BB`, `IC`, `AT`, `PC`, `NC`).
 - **Synchronized Locations:** Maintained 100% synchronicity across `D:\MyoPain-Clinic-Website` and `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`.
 
+## 1E. Official GitHub Repository & Cloud Backup (October 03, 2026)
+- **Repository URL:** `https://github.com/nirajruhe/MyoPain-Clinic-Website`
+- **Owner Account:** `nirajruhe` (Dr. Neeraj Ruhela)
+- **Author Identity:** `Dr. Neeraj Ruhela <337268191+nirajruhe@users.noreply.github.com>`
+- **Active Branch:** `main` (tracked at `origin/main`)
+- **Isolation & Privacy Guarantee:** 100% isolated and independent. Completely unlinked from any other user accounts or external profiles (`gorky117-cell`), safeguarding proprietary intellectual property and patents.
+- **Repository Contents:** Complete production suite committed and live (Semantic HTML5 homepage with 6 verified Google reviews, modular CSS3 stylesheet, dynamic JavaScript, complete asset directory with all 12 photographic service cards, SEO discovery sitemap & robots, handover documentation, and professional README).
+
 ## 1. Project Overview & Client Context
 - **Clinic Name:** MyoPain Physiotherapy & Wellness Clinic
 - **Client Skill Level:** Beginner (explain all technical actions in simple, plain English; no coding required from the user).
