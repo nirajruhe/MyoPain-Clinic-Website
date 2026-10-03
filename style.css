@@ -1359,6 +1359,14 @@ em {
   flex-grow: 1;
 }
 
+/* Mobile Only Utility & Slider Controls */
+.mobile-only {
+  display: none;
+}
+.mobile-slider-controls {
+  display: none;
+}
+
 /* Action & Clinical Notice Banner */
 .details-action-banner {
   display: flex;
@@ -2743,12 +2751,91 @@ em {
     justify-content: space-between;
   }
 
-  .conditions-grid {
-    grid-template-columns: 1fr;
+  .mobile-only {
+    display: flex !important;
   }
 
+  .mobile-slider-controls {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 14px;
+    margin-bottom: 24px;
+  }
+
+  .slider-arrow-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-pill);
+    background: #ffffff;
+    border: 1.5px solid var(--color-mint-border);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(18, 56, 50, 0.08);
+    transition: background var(--transition-fast), transform var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .slider-arrow-btn:active {
+    transform: scale(0.92);
+    background: var(--color-mint-subtle);
+  }
+
+  .slider-counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .slider-counter .current-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-pill);
+    background: #cbdcd4;
+    transition: width 0.25s ease, background-color 0.25s ease;
+    cursor: pointer;
+  }
+
+  .slider-counter .current-dot.active {
+    width: 26px;
+    background: var(--color-secondary);
+  }
+
+  /* Transform into 1-card swipeable slider on mobile phones */
+  .conditions-grid,
   .approach-pillars-grid {
-    grid-template-columns: 1fr;
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 14px !important;
+    margin-bottom: 6px !important;
+    padding-bottom: 6px !important;
+    padding-inline: 2px !important;
+  }
+
+  .conditions-grid::-webkit-scrollbar,
+  .approach-pillars-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .condition-card,
+  .approach-pillar-card {
+    flex: 0 0 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+    box-sizing: border-box !important;
   }
 
   .details-cta-row .button {

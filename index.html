@@ -44,7 +44,7 @@
   <meta name="keywords" content="physiotherapy clinic, MyoPain physiotherapy, Dr Neeraj Ruhela, neuro rehabilitation, orthopedic physiotherapy, NIMHANS Bangalore, sports injury rehab, ISO 9001:2015 certified clinic, back pain treatment, cervical spondylosis, stroke rehab, geriatric physiotherapy">
 
   <!-- Primary Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3.2">
+  <link rel="stylesheet" href="style.css?v=3.5">
 
   <!-- Structured Data 1: Local Healthcare Clinic Schema (Google Rich Results) -->
   <script type="application/ld+json">
@@ -762,6 +762,18 @@
             </div>
           </div>
 
+          <!-- Mobile Slide Navigation for Conditions (Phone Only) -->
+          <div class="mobile-slider-controls mobile-only" id="conditionsMobileControls" aria-label="Conditions navigation">
+            <button class="slider-arrow-btn" id="conditionsPrevBtn" type="button" aria-label="Previous condition card">←</button>
+            <div class="slider-counter" id="conditionsCounter">
+              <span class="current-dot active" data-index="0"></span>
+              <span class="current-dot" data-index="1"></span>
+              <span class="current-dot" data-index="2"></span>
+              <span class="current-dot" data-index="3"></span>
+            </div>
+            <button class="slider-arrow-btn" id="conditionsNextBtn" type="button" aria-label="Next condition card">→</button>
+          </div>
+
           <!-- Assessment & Treatment Approach Section -->
           <div class="treatment-approach-box" id="detailsApproachBox">
             <div class="approach-header">
@@ -793,6 +805,18 @@
                 <h4>Self-Care &amp; Ergonomic Guidance</h4>
                 <p>Clear home exercise prescriptions, movement pacing, and workstation adjustments to sustain long-term relief.</p>
               </div>
+            </div>
+
+            <!-- Mobile Slide Navigation for Approach Pillars (Phone Only) -->
+            <div class="mobile-slider-controls mobile-only" id="pillarsMobileControls" aria-label="Approach pillars navigation">
+              <button class="slider-arrow-btn" id="pillarsPrevBtn" type="button" aria-label="Previous approach step">←</button>
+              <div class="slider-counter" id="pillarsCounter">
+                <span class="current-dot active" data-index="0"></span>
+                <span class="current-dot" data-index="1"></span>
+                <span class="current-dot" data-index="2"></span>
+                <span class="current-dot" data-index="3"></span>
+              </div>
+              <button class="slider-arrow-btn" id="pillarsNextBtn" type="button" aria-label="Next approach step">→</button>
             </div>
           </div>
 
@@ -1606,6 +1630,6 @@
   </button>
 
   <!-- Client-Side JavaScript Logic -->
-  <script src="script.js?v=3.1"></script>
+  <script src="script.js?v=3.5"></script>
 </body>
 </html>

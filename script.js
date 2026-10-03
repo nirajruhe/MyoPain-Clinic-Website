@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBackToTop();
   initScrollSpy();
   initDateConstraints();
+  initMobileCardSliders();
 });
 
 /* ----------------------------------------------------------------------------
@@ -1320,6 +1321,8 @@ function renderServiceDetails(serviceIndex, immediate = false) {
       ctaBtn.setAttribute("data-service-select", data.title);
       ctaBtn.innerHTML = `<span>${data.ctaBtnText || "Request Assessment"}</span> <span aria-hidden="true">→</span>`;
     }
+
+    resetMobileSliders();
   }
 
   if (immediate) {
@@ -1670,4 +1673,74 @@ function escapeHtml(str) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+/* ----------------------------------------------------------------------------
+   12. MOBILE CARD SLIDERS (1-CARD SWIPEABLE CAROUSEL ON PHONES)
+   ---------------------------------------------------------------------------- */
+function initMobileCardSliders() {
+  setupSlider(
+    document.getElementById("detailsConditionsGrid"),
+    document.getElementById("conditionsPrevBtn"),
+    document.getElementById("conditionsNextBtn"),
+    document.getElementById("conditionsCounter")
+  );
+
+  setupSlider(
+    document.getElementById("detailsPillarsGrid"),
+    document.getElementById("pillarsPrevBtn"),
+    document.getElementById("pillarsNextBtn"),
+    document.getElementById("pillarsCounter")
+  );
+
+  function setupSlider(track, prevBtn, nextBtn, counter) {
+    if (!track) return;
+    const dots = counter ? counter.querySelectorAll(".current-dot") : [];
+
+    function updateDots() {
+      if (!dots.length) return;
+      const cardWidth = track.clientWidth || track.offsetWidth;
+      if (!cardWidth) return;
+      const index = Math.round(track.scrollLeft / cardWidth);
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        const cardWidth = track.clientWidth || track.offsetWidth;
+        track.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        const cardWidth = track.clientWidth || track.offsetWidth;
+        track.scrollBy({ left: cardWidth, behavior: "smooth" });
+      });
+    }
+
+    let scrollTimeout;
+    track.addEventListener("scroll", () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(updateDots, 50);
+    }, { passive: true });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        const cardWidth = track.clientWidth || track.offsetWidth;
+        track.scrollTo({ left: i * cardWidth, behavior: "smooth" });
+      });
+    });
+  }
+}
+
+function resetMobileSliders() {
+  const condGrid = document.getElementById("detailsConditionsGrid");
+  const pillGrid = document.getElementById("detailsPillarsGrid");
+  if (condGrid) condGrid.scrollTo({ left: 0, behavior: "smooth" });
+  if (pillGrid) pillGrid.scrollTo({ left: 0, behavior: "smooth" });
+  document.querySelectorAll("#conditionsCounter .current-dot").forEach((d, i) => d.classList.toggle("active", i === 0));
+  document.querySelectorAll("#pillarsCounter .current-dot").forEach((d, i) => d.classList.toggle("active", i === 0));
 }
