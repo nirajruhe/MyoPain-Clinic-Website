@@ -2076,6 +2076,108 @@ em {
   text-decoration: underline;
 }
 
+/* Dedicated High-Contrast Google Maps Navigation Button */
+.maps-nav-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  margin-top: 10px !important;
+  padding: 8px 18px !important;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%) !important;
+  color: #ffffff !important;
+  font-size: 0.84rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  border-radius: var(--radius-pill) !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(18, 56, 50, 0.22) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast) !important;
+  width: fit-content !important;
+  line-height: 1.3 !important;
+}
+
+.maps-nav-btn span,
+.maps-nav-btn strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+.maps-nav-btn:hover {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #157362 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(18, 56, 50, 0.32) !important;
+  text-decoration: none !important;
+}
+
+.maps-nav-btn:hover span {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* Unified Telephone & WhatsApp Action Chips */
+.contact-tel-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.contact-main-phone {
+  font-weight: 700 !important;
+  font-size: 1.02rem !important;
+  color: var(--color-primary) !important;
+}
+
+.contact-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.contact-action-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  padding: 4px 12px !important;
+  border-radius: var(--radius-pill) !important;
+  text-decoration: none !important;
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast) !important;
+}
+
+.contact-action-chip:hover {
+  transform: translateY(-1px) !important;
+  text-decoration: none !important;
+}
+
+.chip-call {
+  background: var(--color-mint-subtle) !important;
+  color: var(--color-primary) !important;
+  border: 1px solid var(--color-mint-border) !important;
+}
+
+.chip-call:hover {
+  background: #d4eae1 !important;
+  color: var(--color-primary-dark) !important;
+}
+
+.chip-wa {
+  background: rgba(37, 211, 102, 0.15) !important;
+  color: #0d5c2a !important;
+  border: 1px solid rgba(37, 211, 102, 0.35) !important;
+}
+
+.chip-wa:hover {
+  background: #25d366 !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3) !important;
+}
+
 /* Operating Hours Table */
 .hours-box {
   background: var(--color-cream);
@@ -2106,26 +2208,6 @@ em {
   text-align: right;
   font-weight: 600;
   color: var(--color-text-main);
-}
-
-/* Direct WhatsApp Quick Chat Box */
-.whatsapp-direct-prompt {
-  margin-top: var(--space-5);
-  padding: var(--space-4);
-  background: #edf8f1;
-  border: 1px solid #cce8d5;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3);
-  flex-wrap: wrap;
-}
-
-.whatsapp-direct-prompt span {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: #1a5e35;
 }
 
 /* Appointment Request Form */
@@ -2413,6 +2495,53 @@ em {
 
 .footer-contact-block strong {
   color: #ffffff;
+}
+
+.footer-maps-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  margin-top: 6px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  background: rgba(121, 212, 190, 0.18) !important;
+  border: 1px solid rgba(121, 212, 190, 0.45) !important;
+  padding: 5px 14px !important;
+  border-radius: var(--radius-pill) !important;
+  text-decoration: none !important;
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast) !important;
+  width: fit-content !important;
+}
+
+.footer-maps-badge:hover {
+  background: #79d4be !important;
+  color: #0b2e27 !important;
+  text-decoration: none !important;
+  transform: translateY(-1px) !important;
+}
+
+.footer-share-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  color: #a7f3d0 !important;
+  background: rgba(37, 211, 102, 0.16) !important;
+  border: 1px solid rgba(37, 211, 102, 0.35) !important;
+  padding: 6px 14px !important;
+  border-radius: var(--radius-pill) !important;
+  text-decoration: none !important;
+  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast) !important;
+  width: fit-content !important;
+}
+
+.footer-share-chip:hover {
+  background: #25d366 !important;
+  color: #073516 !important;
+  text-decoration: none !important;
+  transform: translateY(-1px) !important;
 }
 
 .footer-hours-block {

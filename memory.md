@@ -169,6 +169,22 @@ Last Updated: October 03, 2026
   3. **Site Footer:** Clinic address is an underlined, high-contrast link opening Google Maps turn-by-turn navigation.
 - **URL Destination:** Direct query to `https://www.google.com/maps/search/?api=1&query=MyoPain+Physiotherapy+Wellness+Clinic+Infront+of+Galaxy+Tower+Near+Emerald+Grand+Hotel+Sahastradhara+Road+Dehradun+248013`, opening the native Google Maps app on smartphones or browser map on computers.
 
+## 1N. Contact Deduplication, Maps Visibility & Seamless Booking Flow (October 03, 2026)
+- **Maps Button High-Contrast Styling:** Created `.maps-nav-btn` with rich medical teal gradient background and bold `#ffffff !important` white text, resolving the previous issue where `.contact-detail-text a` forced the text to dark muted grey.
+- **Contact Card Deduplication:**
+  - Unified Telephone and WhatsApp into a single clean block (`Telephone & WhatsApp Desk`) with two dedicated quick-action chips (`📞 Direct Call` and `💬 WhatsApp Chat`).
+  - Eliminated repeating `+91 8979632503` twice in the contact list.
+  - Removed the redundant `whatsapp-direct-prompt` box below operating hours that was duplicating "Message on WhatsApp" for a third time.
+- **Seamless Direct Booking Flow ("No Confusion, Instant Booking"):**
+  - Updated submit button to **`Book Appointment on WhatsApp →`** (authoritative, clear action).
+  - Clarified pre-booking note: `⚡ Instant 1-Click WhatsApp Booking: Your appointment request is sent directly to Dr. Neeraj on WhatsApp for prompt scheduling & confirmation. Free consultation inquiry, 100% confidential.`
+  - Enhanced on-screen confirmation banner with direct clickable button (`💬 Open WhatsApp & Confirm Booking ↗`) ensuring seamless fallback on laptops/desktops even if popup blockers intervene.
+- **Footer Location & Sharing Enhancements:**
+  - Added direct Google Maps GPS badge (`📍 Get Directions on Google Maps ↗`) in Footer Column 4.
+  - Added dedicated WhatsApp chat channel in Footer Column 4.
+  - Added 1-tap **`📲 Share Clinic Location on WhatsApp`** button allowing patients to instantly share clinic address, Google Maps link, and phone number with friends/family.
+  - Cache-busting version bumped to `v=4.3`.
+
 ## 1. Project Overview & Client Context
 - **Clinic Name:** MyoPain Physiotherapy & Wellness Clinic
 - **Client Skill Level:** Beginner (explain all technical actions in simple, plain English; no coding required from the user).

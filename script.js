@@ -1552,13 +1552,14 @@ function initAppointmentForm() {
 
         feedbackBox.className = "form-feedback-box visible success";
         feedbackBox.innerHTML = `
-          <strong>✓ Appointment Draft Ready</strong>
-          <p style="margin: 6px 0;">
-            WhatsApp has been opened in a new tab with your pre-filled request. Please review the message and click <strong>Send</strong> in WhatsApp.
+          <strong>🎉 Appointment Request Sent to WhatsApp!</strong>
+          <p style="margin: 8px 0 10px; font-size: 0.92rem; line-height: 1.5;">
+            Your details have been prepared for Dr. Neeraj (+91 8979632503). 
+            WhatsApp is opening now — simply press <strong>Send</strong> in WhatsApp to confirm your preferred consultation slot!
           </p>
-          <p style="margin: 0; font-size: 0.85rem;">
-            If WhatsApp did not open automatically, <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" style="font-weight: 700; text-decoration: underline;">click here to launch WhatsApp</a>.
-          </p>
+          <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="button button-whatsapp button-sm" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; padding: 10px 20px; font-size: 0.92rem; text-decoration: none; margin-top: 4px;">
+            <span>💬 Open WhatsApp &amp; Confirm Booking ↗</span>
+          </a>
         `;
 
         // Safely open in new tab
