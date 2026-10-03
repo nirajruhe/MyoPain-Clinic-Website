@@ -2,5 +2,4 @@
 User-agent: *
 Allow: /
 
-# Update domain when deployed
-# Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://myopainphysiowellness.in/sitemap.xml
