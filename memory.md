@@ -394,7 +394,7 @@ Last Updated: October 03, 2026
 ## 9. Development Rules
 - Use vanilla HTML, CSS, and JavaScript only. Do not install heavy frameworks (React, Vue, Tailwind) unless explicitly requested.
 - Always inspect files before editing.
-- Always keep `D:\MyoPain-Clinic-Website` and `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website` synchronized.
+- Master local working directory is `D:\MyoPain-Clinic-Website` (all changes synchronized directly to GitHub `main` branch).
 - Never expose private keys, credentials, or secrets in frontend code.
 - Always perform browser verification and verify 0 console errors.
 
