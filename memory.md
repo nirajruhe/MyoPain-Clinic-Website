@@ -34,7 +34,8 @@ Last Updated: October 03, 2026
 - **AI Representation Status:** Confirmed that, apart from Dr. Neeraj Ruhela (PT) whose real photograph is used, all assisting physiotherapists (female PT, 3rd male PT) and patients in the service cards are synthetic/AI-assisted photographic models created to safeguard patient confidentiality and medical privacy (in accordance with clinical healthcare ethics).
 - **Discreet Disclaimers Placed:**
   1. **Footer Bottom Legal Strip:** A subtle, tiny notice (`font-size: 0.7rem; color: #7f9992;`) right below the copyright line.
-  2. **Medical Disclaimer Section (`#disclaimer`):** A clear ethical privacy statement explaining that clinical scenarios and assisting personnel feature illustrative models for patient education and do not depict specific private individuals.
+  2. **Conditions Clinical Notice:** Contextual clinical guidance callout in the conditions section advising patients on individualized assessment.
+
 
 
 
@@ -118,6 +119,17 @@ Last Updated: October 03, 2026
     - Added 4 seamless cloned pillar cards with `display: flex !important;` on mobile and `display: none !important;` on desktop.
     - Added touch/hover pause (`animation-play-state: paused !important;`) so mobile visitors can pause to read comfortably at any time.
   - **Desktop 100% Intact:** Desktop screens (>640px) preserve the exact 4-column static grid with zero animation and zero clones.
+- **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
+
+## 1J. Redundant Post-Appointment Medical Disclaimer Removal (October 03, 2026)
+- **Problem Solved:** An extra, repetitive Medical Disclaimer section (`<section class="medical-disclaimer-section" id="disclaimer">`) was positioned directly below the `#appointment` booking section, repeating standard emergency disclaimer points that were already covered contextually in `#conditions` (`.clinical-disclaimer-callout`) and in the footer legal notice. It also left a dangling `#disclaimer` anchor link in the footer bottom bar.
+- **Solution Implemented:**
+  - Removed `<section class="medical-disclaimer-section" id="disclaimer">` completely from `index.html`.
+  - Removed the redundant `<a href="#disclaimer">Medical Disclaimer</a>` link from the `.footer-bottom-links` container.
+  - Bumped stylesheet and script cache-busting query strings to `v=4.0` in `index.html`.
+  - Streamlined page flow: `#appointment` now transitions immediately and cleanly into `<footer class="site-footer" id="contact">`.
+  - Preserved ethical illustrative imagery and clinical notices within the footer legal strip and `#conditions` callout.
+  - Desktop and mobile layouts remain 100% clean and fully functional with 0 broken links or visual gaps.
 - **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
 
 ## 1. Project Overview & Client Context
@@ -248,9 +260,8 @@ Last Updated: October 03, 2026
 10. **Patient Reviews (Ethical Preview):** Formatted cards with explicit healthcare compliance notice (no fake reviews).
 11. **FAQ Accordion:** 8 practical patient questions with keyboard and screen reader support.
 12. **Appointment & Contact Hub:** Clinic details, operating hours table, direct call/WhatsApp links, and validated appointment form.
-13. **Medical Disclaimer Notice:** Clear educational disclaimer stating content does not replace physician consultation.
-14. **Footer:** Operating hours, quick links, emergency medical notice, auto-updating copyright year.
-15. **Back to Top Button:** Floating smooth-scroll button appearing after 400px scroll.
+13. **Footer:** Operating hours, quick links, clinical emergency guidance & ethical privacy notice, auto-updating copyright year.
+14. **Back to Top Button:** Floating smooth-scroll button appearing after 400px scroll.
 
 ---
 
