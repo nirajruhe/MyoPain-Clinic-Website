@@ -61,4 +61,4 @@ Then open `http://localhost:9000` in any web browser.
 **MyoPain Physiotherapy & Wellness Clinic**  
 UGF-08, Apex Royal Castle, Nyay Khand 2, Indirapuram, Ghaziabad, UP 201014  
 (Infront of Galaxy Tower, Kala Patthar Road)  
-📞 **Phone / WhatsApp:** +91 93112 11440
+📞 **Phone / WhatsApp:** +91 8979632503
