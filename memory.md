@@ -179,11 +179,19 @@ Last Updated: October 03, 2026
   - Updated submit button to **`Book Appointment on WhatsApp →`** (authoritative, clear action).
   - Clarified pre-booking note: `⚡ Instant 1-Click WhatsApp Booking: Your appointment request is sent directly to Dr. Neeraj on WhatsApp for prompt scheduling & confirmation. Free consultation inquiry, 100% confidential.`
   - Enhanced on-screen confirmation banner with direct clickable button (`💬 Open WhatsApp & Confirm Booking ↗`) ensuring seamless fallback on laptops/desktops even if popup blockers intervene.
-- **Footer Location & Sharing Enhancements:**
-  - Added direct Google Maps GPS badge (`📍 Get Directions on Google Maps ↗`) in Footer Column 4.
-  - Added dedicated WhatsApp chat channel in Footer Column 4.
-  - Added 1-tap **`📲 Share Clinic Location on WhatsApp`** button allowing patients to instantly share clinic address, Google Maps link, and phone number with friends/family.
-  - Cache-busting version bumped to `v=4.3`.
+- **Footer Location & Sharing Enhancements (Previous Iteration):**
+  - Tested adding extra location and share badges in Footer Column 4.
+
+## 1O. Footer Decluttering & 3-Column Balanced Alignment (October 03, 2026)
+- **Problem Addressed:** The site owner requested removing the redundant address/contact details column from the footer ("reduct an we site very bsius"), as all contact details, telephone, WhatsApp chat, and 1-tap Google Maps navigation are already prominently featured in the dedicated `#appointment` section directly above.
+- **Solution Implemented:**
+  - Removed Column 4 ("Location & Inquiries") from the site footer in `index.html`.
+  - Rebalanced `.footer-grid` to a clean, spacious 3-column layout (`grid-template-columns: 1.55fr 1fr 1.25fr;` on desktop):
+    - Column 1: Clinic Overview, Motto, State Registration (`UN-UK-05-0099758`), and ISO 9001:2015 certification.
+    - Column 2: Explore Clinic (quick internal navigation links).
+    - Column 3: Clinic Operating Hours (Monday–Saturday shifts, Sunday closed) and clinical advisory note.
+  - Generous column spacing and max-width adjustment (`max-width: 400px;`) for description text ensure perfect visual balance.
+  - Cache-busting version bumped to `v=4.4`.
 
 ## 1. Project Overview & Client Context
 - **Clinic Name:** MyoPain Physiotherapy & Wellness Clinic

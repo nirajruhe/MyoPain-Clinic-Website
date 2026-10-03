@@ -2432,10 +2432,11 @@ em {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr 0.9fr 1.1fr;
-  gap: clamp(24px, 4vw, 48px);
+  grid-template-columns: 1.55fr 1fr 1.25fr;
+  gap: clamp(32px, 5vw, 64px);
   padding-bottom: clamp(36px, 5vw, 54px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: start;
 }
 
 .footer-col .brand {
@@ -2455,7 +2456,7 @@ em {
   line-height: 1.6;
   color: #a7c2b9;
   margin-bottom: var(--space-4);
-  max-width: 320px;
+  max-width: 400px;
 }
 
 .footer-col h4 {
@@ -2490,58 +2491,11 @@ em {
   color: #a7c2b9;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-contact-block strong {
   color: #ffffff;
-}
-
-.footer-maps-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 5px !important;
-  margin-top: 6px !important;
-  font-size: 0.78rem !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  background: rgba(121, 212, 190, 0.18) !important;
-  border: 1px solid rgba(121, 212, 190, 0.45) !important;
-  padding: 5px 14px !important;
-  border-radius: var(--radius-pill) !important;
-  text-decoration: none !important;
-  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast) !important;
-  width: fit-content !important;
-}
-
-.footer-maps-badge:hover {
-  background: #79d4be !important;
-  color: #0b2e27 !important;
-  text-decoration: none !important;
-  transform: translateY(-1px) !important;
-}
-
-.footer-share-chip {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  font-size: 0.76rem !important;
-  font-weight: 700 !important;
-  color: #a7f3d0 !important;
-  background: rgba(37, 211, 102, 0.16) !important;
-  border: 1px solid rgba(37, 211, 102, 0.35) !important;
-  padding: 6px 14px !important;
-  border-radius: var(--radius-pill) !important;
-  text-decoration: none !important;
-  transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast) !important;
-  width: fit-content !important;
-}
-
-.footer-share-chip:hover {
-  background: #25d366 !important;
-  color: #073516 !important;
-  text-decoration: none !important;
-  transform: translateY(-1px) !important;
 }
 
 .footer-hours-block {
@@ -2549,7 +2503,7 @@ em {
   color: #9cb9b0;
   line-height: 1.5;
   margin-top: 8px;
-  padding-top: 8px;
+  padding-top: 10px;
   border-top: 1px dashed rgba(255, 255, 255, 0.12);
 }
 
