@@ -132,6 +132,27 @@ Last Updated: October 03, 2026
   - Desktop and mobile layouts remain 100% clean and fully functional with 0 broken links or visual gaps.
 - **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
 
+## 1K. Mobile Nav Hamburger Button, Rightward Shift Elimination, & Auto-Sliding Reviews (October 03, 2026)
+- **Problems Solved:**
+  1. **Hamburger Button `--` Defect (Screen 1):** On mobile devices, the hamburger menu toggle showed broken horizontal dashes (`--`) instead of 3 cleanly stacked bars because `.menu-toggle` had `display: flex` defaulting to `flex-direction: row` with sibling top margins.
+  2. **Mobile Alignment Rightward Shift & Blank Left Column (Screen 2):** When visiting on mobile or navigating to sections (e.g. `#approach`), the entire screen shifted rightward with a large blank space on the left and cut-off content on the right. Root cause: `.site-header` had `backdrop-filter: blur(16px)` which created a containing block for fixed descendants; the hidden `.main-nav` (`transform: translateX(100%)`) was protruding 340px outside the header into the document margin, expanding document scrollWidth to 825px.
+  3. **Patient Reviews Auto-Slide with Active Arrows:** On phone, patient reviews needed to automatically slide gently from left to right while also keeping the `←` and `→` arrow buttons and dots fully interactive.
+- **Solutions Implemented:**
+  - **Hamburger Button (☰) Restored:**
+    - Configured `.menu-toggle` with `flex-direction: column !important; justify-content: center !important; align-items: center !important; gap: 5px !important;`.
+    - Centered `.hamburger-line` spans (22px x 2px) without offset margins, restoring a crisp, balanced 3-line hamburger icon when closed and clean ✕ cross when opened.
+  - **Horizontal Protrusion & Rightward Shift Eliminated:**
+    - Set `.main-nav:not(.open) { display: none !important; visibility: hidden !important; pointer-events: none !important; }` on mobile, eliminating 100% of off-screen layout protrusion.
+    - Added `overflow-x: clip; max-width: 100%;` to `.site-header` and mobile containers.
+    - Document width on mobile is now strictly 100% with zero horizontal scrolling or diagonal drifting.
+  - **Reviews Auto-Sliding with Loop & Arrow Controls:**
+    - Upgraded `setupSlider` in `script.js` with an `autoPlayMs` parameter (4500ms) for `#reviewsGridTrack`.
+    - Reviews gently auto-slide every 4.5s from left to right, looping seamlessly back to the first review upon reaching the end.
+    - Arrow buttons (`←` and `→`) and dot indicator pills remain 100% interactive.
+    - Interacting (tapping arrows or touch swiping) pauses auto-play for 6.5s of reading time before smoothly resuming.
+  - **Desktop 100% Intact:** Wide multi-column desktop grids remain pristine and static.
+- **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
+
 ## 1. Project Overview & Client Context
 - **Clinic Name:** MyoPain Physiotherapy & Wellness Clinic
 - **Client Skill Level:** Beginner (explain all technical actions in simple, plain English; no coding required from the user).

@@ -1718,7 +1718,8 @@ function initMobileCardSliders() {
     document.getElementById("reviewsGridTrack"),
     document.getElementById("reviewsPrevBtn"),
     document.getElementById("reviewsNextBtn"),
-    document.getElementById("reviewsCounter")
+    document.getElementById("reviewsCounter"),
+    4500
   );
 
   setupSlider(
@@ -1728,7 +1729,7 @@ function initMobileCardSliders() {
     document.getElementById("faqCounter")
   );
 
-  function setupSlider(track, prevBtn, nextBtn, counter) {
+  function setupSlider(track, prevBtn, nextBtn, counter, autoPlayMs) {
     if (!track) return;
     const dots = counter ? counter.querySelectorAll(".current-dot") : [];
 
@@ -1742,17 +1743,67 @@ function initMobileCardSliders() {
       });
     }
 
+    function slideNext() {
+      const cardWidth = track.clientWidth || track.offsetWidth;
+      if (!cardWidth) return;
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft >= maxScroll - 20) {
+        track.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        track.scrollBy({ left: cardWidth, behavior: "smooth" });
+      }
+    }
+
+    function slidePrev() {
+      const cardWidth = track.clientWidth || track.offsetWidth;
+      if (!cardWidth) return;
+      if (track.scrollLeft <= 20) {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        track.scrollTo({ left: maxScroll, behavior: "smooth" });
+      } else {
+        track.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      }
+    }
+
+    let autoTimer = null;
+    let resumeTimer = null;
+
+    function startAutoSlide() {
+      if (!autoPlayMs || window.innerWidth > 640) return;
+      stopAutoSlide();
+      autoTimer = setInterval(() => {
+        if (window.innerWidth <= 640) {
+          slideNext();
+        }
+      }, autoPlayMs);
+    }
+
+    function stopAutoSlide() {
+      if (autoTimer) {
+        clearInterval(autoTimer);
+        autoTimer = null;
+      }
+    }
+
+    function pauseAndResume() {
+      stopAutoSlide();
+      clearTimeout(resumeTimer);
+      if (autoPlayMs) {
+        resumeTimer = setTimeout(startAutoSlide, 6500);
+      }
+    }
+
     if (prevBtn) {
       prevBtn.addEventListener("click", () => {
-        const cardWidth = track.clientWidth || track.offsetWidth;
-        track.scrollBy({ left: -cardWidth, behavior: "smooth" });
+        slidePrev();
+        pauseAndResume();
       });
     }
 
     if (nextBtn) {
       nextBtn.addEventListener("click", () => {
-        const cardWidth = track.clientWidth || track.offsetWidth;
-        track.scrollBy({ left: cardWidth, behavior: "smooth" });
+        slideNext();
+        pauseAndResume();
       });
     }
 
@@ -1762,10 +1813,22 @@ function initMobileCardSliders() {
       scrollTimeout = setTimeout(updateDots, 50);
     }, { passive: true });
 
+    if (autoPlayMs) {
+      startAutoSlide();
+
+      track.addEventListener("touchstart", () => {
+        pauseAndResume();
+      }, { passive: true });
+
+      track.addEventListener("mouseenter", stopAutoSlide);
+      track.addEventListener("mouseleave", startAutoSlide);
+    }
+
     dots.forEach((dot, i) => {
       dot.addEventListener("click", () => {
         const cardWidth = track.clientWidth || track.offsetWidth;
         track.scrollTo({ left: i * cardWidth, behavior: "smooth" });
+        pauseAndResume();
       });
     });
   }
