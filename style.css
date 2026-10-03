@@ -68,8 +68,8 @@
   --transition-base: 0.28s ease;
   --transition-smooth: 0.38s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Layout */
-  --container-max: 1180px;
+  /* Layout (Controlled 1200-1280px Desktop Content Boundary) */
+  --container-max: 1240px;
   --header-height: 82px;
 }
 
@@ -859,10 +859,6 @@ em {
 .trust-strip-container {
   width: min(var(--container-max), calc(100% - 48px));
   margin-inline: auto;
-}
-
-.trust-pillar-clone {
-  display: none !important;
 }
 
 .trust-strip-grid {
@@ -2571,6 +2567,104 @@ em {
 /* --------------------------------------------------------------------------
    20. RESPONSIVE MEDIA QUERIES
    -------------------------------------------------------------------------- */
+/* Desktop Whitespace & Compact Layout Optimization (>= 881px) */
+@media (min-width: 881px) {
+  /* Controlled section padding: reduced from 105px to 68px */
+  .section {
+    padding-block: 68px;
+  }
+
+  /* Compact section heading margins: reduced from 60px to 38px */
+  .section-heading {
+    margin-bottom: 38px;
+  }
+
+  /* Tighter hero layout */
+  .hero-grid {
+    padding-block: 46px;
+    min-height: 490px;
+    gap: 36px;
+  }
+
+  /* Compact Trust Strip */
+  .trust-strip-grid {
+    padding-block: 30px;
+    gap: var(--space-5);
+  }
+
+  /* Services header spacing */
+  .services-header-wrap {
+    margin-bottom: 30px;
+  }
+
+  /* Service Details & Approach Spacing */
+  #detailsHeadingWrap {
+    margin-bottom: 28px;
+  }
+
+  .conditions-grid {
+    margin-bottom: 30px;
+  }
+
+  .treatment-approach-box {
+    padding: 28px 32px;
+    margin-bottom: 28px;
+  }
+
+  /* Approach section */
+  #approach {
+    padding-block: 54px;
+  }
+
+  .approach-grid {
+    gap: clamp(40px, 4.5vw, 64px);
+  }
+
+  .approach-pillars {
+    margin-block: var(--space-4);
+    gap: 12px;
+  }
+
+  /* Journey section */
+  #journey {
+    padding-block: 54px;
+  }
+
+  #journey .section-heading {
+    margin-bottom: 30px;
+  }
+
+  /* Team section */
+  .team-owner-notice {
+    margin-top: 28px;
+  }
+
+  /* Reviews Section: reduce dead space void from 64px to 28px */
+  .google-rating-banner {
+    margin-bottom: 28px;
+  }
+
+  /* Appointment Section */
+  .appointment-grid {
+    gap: 40px;
+  }
+
+  .contact-detail-items {
+    margin-block: var(--space-4);
+  }
+
+  /* Footer */
+  .site-footer {
+    padding-top: 52px;
+    padding-bottom: 24px;
+  }
+
+  .footer-grid {
+    gap: 44px;
+    padding-bottom: 36px;
+  }
+}
+
 /* Large Tablet & Small Desktop (<= 1100px) */
 @media (max-width: 1100px) {
   .hero-grid {
@@ -2908,29 +3002,28 @@ em {
     overflow: hidden !important;
   }
 
-  .trust-pillar-clone {
-    display: flex !important;
-  }
-
   .trust-strip-grid {
     display: flex !important;
     flex-direction: row !important;
-    width: max-content !important;
-    gap: 16px !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 14px !important;
     padding-inline: 16px !important;
-    animation: trustMarqueeScroll 28s linear infinite !important;
-    will-change: transform !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
-  .trust-strip-grid:hover,
-  .trust-strip-grid:active {
-    animation-play-state: paused !important;
+  .trust-strip-grid::-webkit-scrollbar {
+    display: none !important;
   }
 
   .trust-pillar {
     flex: 0 0 250px !important;
     min-width: 250px !important;
     max-width: 250px !important;
+    scroll-snap-align: start !important;
     border-right: none !important;
     border-bottom: none !important;
     background: rgba(255, 255, 255, 0.07) !important;
@@ -2940,15 +3033,6 @@ em {
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
-  }
-
-  @keyframes trustMarqueeScroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-50% - 8px));
-    }
   }
 
   .services-carousel-track .service-card {

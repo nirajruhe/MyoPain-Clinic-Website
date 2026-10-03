@@ -1,6 +1,6 @@
 # Project Memory & Knowledge Base: MyoPain Physiotherapy & Wellness Clinic
 
-Last Updated: October 03, 2026
+Last Updated: October 04, 2026
 
 ---
 
@@ -192,6 +192,36 @@ Last Updated: October 03, 2026
     - Column 3: Clinic Operating Hours (Monday–Saturday shifts, Sunday closed) and clinical advisory note.
   - Generous column spacing and max-width adjustment (`max-width: 400px;`) for description text ensure perfect visual balance.
   - Cache-busting version bumped to `v=4.4`.
+
+## 1P. Desktop Whitespace Optimization, Container Constraint & Trust Pillar Deduplication (October 04, 2026)
+- **Safety Pre-Check & Backup:**
+  - Created Git backup tag `pre-desktop-spacing-edit` and physical backup directory at `backup-pre-desktop-spacing/` before making any code modifications.
+- **Trust Strip Deduplication:**
+  - Removed the 4 cloned duplicate pillar cards (`.trust-pillar-clone`) from the Trust Strip (`#commitments` / `.trust-strip`) in `index.html`.
+  - Exactly ONE copy of each trust pillar remains:
+    1. Thorough Assessment
+    2. Collaborative Planning
+    3. Active Rehabilitation
+    4. Transparent Progress
+  - Removed obsolete `.trust-pillar-clone` CSS rule and replaced duplicate marquee with clean native horizontal scrolling for mobile if viewed, while keeping static 4-column grid on desktop.
+- **Controlled Desktop Container Max-Width:**
+  - Set `--container-max: 1240px` (within the requested 1200–1280px range).
+  - Main desktop content remains centered and never stretches excessively on ultra-wide screens (1440px, 1920px).
+- **Desktop Vertical Whitespace & Section Padding Reduction:**
+  - Encapsulated strictly inside a dedicated `@media (min-width: 881px)` media query so mobile and tablet layouts are 100% untouched.
+  - Section vertical padding (`.section`) reduced from `105px` to `68px` (`padding-block: 68px`).
+  - Section heading bottom margins (`.section-heading`) reduced from `60px` to `38px`.
+  - Hero vertical padding reduced from `72px` to `46px` (`min-height: 490px`, `gap: 36px`).
+  - Reviews Google rating banner bottom margin reduced from `64px` to `28px`.
+  - Approach and Journey section padding tightened to `54px`.
+  - Appointment grid gap tightened to `40px`.
+  - Footer vertical padding tightened (`padding-top: 52px; padding-bottom: 24px; gap: 44px;`).
+- **Preservation of Mobile & Functional Features:**
+  - Zero changes to mobile layouts or styling (`<= 640px` and tablet `<= 880px`).
+  - Zero changes to services, carousel logic, swipe behavior, arrow buttons, booking system, WhatsApp, phone links, Google Maps navigation, SEO, schema, navigation, team, or FAQ.
+  - All automated tests passing: `test_sliders.js` (14/14), `test_new_fixes.js` (17/17), and `verify_booking.js` (4/4) — 35/35 checks passing.
+  - Cache-busting version bumped to `v=4.5`.
+- **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website` and live GitHub repository.
 
 ## 1. Project Overview & Client Context
 - **Clinic Name:** MyoPain Physiotherapy & Wellness Clinic
