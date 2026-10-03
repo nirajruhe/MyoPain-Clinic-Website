@@ -836,6 +836,16 @@ em {
   background: var(--color-primary);
   color: var(--color-text-light);
   border-block: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.trust-strip-container {
+  width: min(var(--container-max), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.trust-pillar-clone {
+  display: none !important;
 }
 
 .trust-strip-grid {
@@ -2731,20 +2741,61 @@ em {
     display: none;
   }
 
+  .trust-strip {
+    overflow: hidden !important;
+    padding-block: 16px !important;
+    position: relative !important;
+  }
+
+  .trust-strip-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .trust-pillar-clone {
+    display: flex !important;
+  }
+
   .trust-strip-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
+    display: flex !important;
+    flex-direction: row !important;
+    width: max-content !important;
+    gap: 16px !important;
+    padding-inline: 16px !important;
+    animation: trustMarqueeScroll 28s linear infinite !important;
+    will-change: transform !important;
+  }
+
+  .trust-strip-grid:hover,
+  .trust-strip-grid:active {
+    animation-play-state: paused !important;
   }
 
   .trust-pillar {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    padding-bottom: var(--space-4);
+    flex: 0 0 250px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: var(--radius-md) !important;
+    padding: 16px 18px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
-  .trust-pillar:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+  @keyframes trustMarqueeScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - 8px));
+    }
   }
 
   .services-carousel-track .service-card {
@@ -2902,9 +2953,30 @@ em {
     font-size: 0.9rem !important;
   }
 
+  .details-cta-row {
+    padding: 20px 16px !important;
+  }
+
   .details-cta-row .button {
-    width: 100%;
-    justify-content: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    padding: 12px 18px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.35 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+    border-radius: var(--radius-pill) !important;
+  }
+
+  .details-cta-row .button span:first-child {
+    text-align: center;
+    line-height: 1.35;
+    display: inline;
   }
 
   /* Appointment & Contact Alignment & Overflow Fix (Screens 1 & 2) */

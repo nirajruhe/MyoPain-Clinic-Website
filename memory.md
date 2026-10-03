@@ -105,6 +105,21 @@ Last Updated: October 03, 2026
   - **Desktop 100% Intact:** All desktop screens (>640px) maintain identical multi-column layout with mobile controls hidden.
 - **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
 
+## 1I. Mobile Trust Strip Continuous Slow Auto-Scroll & Button Pill Text Containment (October 03, 2026)
+- **Problem Solved:**
+  1. In the Service Details CTA card on phone, long button text (e.g. "Request Assessment for Posture Care →") spilled out of the white pill button on both left and right due to `white-space: nowrap` and rigid button padding.
+  2. The Trust Strip / Clinic Commitments (Thorough Assessment, Collaborative Planning, Active Rehabilitation, Transparent Progress) were stacked vertically on mobile phone instead of smoothly sliding.
+- **Solution Implemented:**
+  - **Button Pill Text Containment (Screen 1):**
+    - Set `.details-cta-row .button` on mobile (`<=640px`) to `white-space: normal !important; padding: 12px 18px !important; font-size: 0.9rem !important; line-height: 1.35 !important;`.
+    - Text is now 100% completely inside the white button pill with graceful centered wrapping and comfortable inner padding, eliminating any text spillage outside the button boundary.
+  - **Trust Strip Slow Continuous Auto-Scroll (Screen 2):**
+    - Upgraded `.trust-strip` on mobile (`<=640px`) into an infinite, hardware-accelerated smooth marquee (`animation: trustMarqueeScroll 28s linear infinite !important;`).
+    - Added 4 seamless cloned pillar cards with `display: flex !important;` on mobile and `display: none !important;` on desktop.
+    - Added touch/hover pause (`animation-play-state: paused !important;`) so mobile visitors can pause to read comfortably at any time.
+  - **Desktop 100% Intact:** Desktop screens (>640px) preserve the exact 4-column static grid with zero animation and zero clones.
+- **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
+
 ## 1. Project Overview & Client Context
 - **Clinic Name:** MyoPain Physiotherapy & Wellness Clinic
 - **Client Skill Level:** Beginner (explain all technical actions in simple, plain English; no coding required from the user).
