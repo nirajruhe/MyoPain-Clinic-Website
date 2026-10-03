@@ -44,7 +44,7 @@
   <meta name="keywords" content="physiotherapy clinic, MyoPain physiotherapy, Dr Neeraj Ruhela, neuro rehabilitation, orthopedic physiotherapy, NIMHANS Bangalore, sports injury rehab, ISO 9001:2015 certified clinic, back pain treatment, cervical spondylosis, stroke rehab, geriatric physiotherapy">
 
   <!-- Primary Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3.5">
+  <link rel="stylesheet" href="style.css?v=3.6">
 
   <!-- Structured Data 1: Local Healthcare Clinic Schema (Google Rich Results) -->
   <script type="application/ld+json">
@@ -921,7 +921,7 @@
           <p>A simple, transparent 4-step process designed to make your clinic visit straightforward and stress-free.</p>
         </div>
 
-        <div class="journey-timeline">
+        <div class="journey-timeline" id="journeyTimelineTrack">
           <!-- Step 1 -->
           <div class="journey-step-card">
             <span class="journey-step-badge">Step 01</span>
@@ -957,6 +957,18 @@
               Regular functional milestone reviews, gradual load progression, and self-care strategies so you maintain movement long-term.
             </p>
           </div>
+        </div>
+
+        <!-- Mobile Slide Navigation for Patient Journey (Phone Only) -->
+        <div class="mobile-slider-controls mobile-only" id="journeyMobileControls" aria-label="Journey steps navigation">
+          <button class="slider-arrow-btn" id="journeyPrevBtn" type="button" aria-label="Previous pathway step">←</button>
+          <div class="slider-counter" id="journeyCounter">
+            <span class="current-dot active" data-index="0"></span>
+            <span class="current-dot" data-index="1"></span>
+            <span class="current-dot" data-index="2"></span>
+            <span class="current-dot" data-index="3"></span>
+          </div>
+          <button class="slider-arrow-btn" id="journeyNextBtn" type="button" aria-label="Next pathway step">→</button>
         </div>
       </div>
     </section>
@@ -1155,6 +1167,20 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Mobile Slide Navigation for Patient Reviews (Phone Only) -->
+        <div class="mobile-slider-controls mobile-only" id="reviewsMobileControls" aria-label="Patient reviews navigation">
+          <button class="slider-arrow-btn" id="reviewsPrevBtn" type="button" aria-label="Previous review">←</button>
+          <div class="slider-counter" id="reviewsCounter">
+            <span class="current-dot active" data-index="0"></span>
+            <span class="current-dot" data-index="1"></span>
+            <span class="current-dot" data-index="2"></span>
+            <span class="current-dot" data-index="3"></span>
+            <span class="current-dot" data-index="4"></span>
+            <span class="current-dot" data-index="5"></span>
+          </div>
+          <button class="slider-arrow-btn" id="reviewsNextBtn" type="button" aria-label="Next review">→</button>
         </div>
       </div>
     </section>
@@ -1630,6 +1656,6 @@
   </button>
 
   <!-- Client-Side JavaScript Logic -->
-  <script src="script.js?v=3.5"></script>
+  <script src="script.js?v=3.6"></script>
 </body>
 </html>

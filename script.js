@@ -1693,6 +1693,20 @@ function initMobileCardSliders() {
     document.getElementById("pillarsCounter")
   );
 
+  setupSlider(
+    document.getElementById("journeyTimelineTrack"),
+    document.getElementById("journeyPrevBtn"),
+    document.getElementById("journeyNextBtn"),
+    document.getElementById("journeyCounter")
+  );
+
+  setupSlider(
+    document.getElementById("reviewsGridTrack"),
+    document.getElementById("reviewsPrevBtn"),
+    document.getElementById("reviewsNextBtn"),
+    document.getElementById("reviewsCounter")
+  );
+
   function setupSlider(track, prevBtn, nextBtn, counter) {
     if (!track) return;
     const dots = counter ? counter.querySelectorAll(".current-dot") : [];

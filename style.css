@@ -2807,9 +2807,11 @@ em {
     background: var(--color-secondary);
   }
 
-  /* Transform into 1-card swipeable slider on mobile phones */
+  /* Transform multi-card sections into 1-card swipeable sliders on mobile phones */
   .conditions-grid,
-  .approach-pillars-grid {
+  .approach-pillars-grid,
+  .journey-timeline,
+  .reviews-grid {
     display: flex !important;
     flex-direction: row !important;
     overflow-x: auto !important;
@@ -2824,12 +2826,16 @@ em {
   }
 
   .conditions-grid::-webkit-scrollbar,
-  .approach-pillars-grid::-webkit-scrollbar {
+  .approach-pillars-grid::-webkit-scrollbar,
+  .journey-timeline::-webkit-scrollbar,
+  .reviews-grid::-webkit-scrollbar {
     display: none !important;
   }
 
   .condition-card,
-  .approach-pillar-card {
+  .approach-pillar-card,
+  .journey-step-card,
+  .review-placeholder-card {
     flex: 0 0 100% !important;
     min-width: 100% !important;
     max-width: 100% !important;
@@ -2841,10 +2847,6 @@ em {
   .details-cta-row .button {
     width: 100%;
     justify-content: center;
-  }
-
-  .journey-timeline {
-    grid-template-columns: 1fr;
   }
 
   .team-grid {
