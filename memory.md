@@ -84,6 +84,27 @@ Last Updated: October 03, 2026
   - Automatic 301 redirection from HTTP to HTTPS and from `www` to apex domain.
   - Verified live: Returns `HTTP 200 OK` with full browser trust and green lock.
 
+## 1H. Mobile Polishing: FAQ Slider, Approach Pillars Slider, & Appointment Overflow Fix (October 03, 2026)
+- **Problem Solved:**
+  1. On smartphone screens, the appointment form and direct contact card suffered from right-side cut-off/misalignment due to absolute offset on `.approach-callout-card` (`right: -20px`), email string overflow without break-word, and `white-space: nowrap` on WhatsApp submit buttons.
+  2. The 4 approach pillars in `#approach` ("Care centered around your daily life") were vertically stacked.
+  3. The 8 FAQ questions in `#faq` were vertically stacked.
+- **Solution Implemented:**
+  - **Right-Side Alignment & Overflow Eliminated:**
+    - `.approach-callout-card` set to `position: static !important; max-width: 100% !important;` on mobile (`<=640px`).
+    - Added `overflow-wrap: break-word` and `word-break: break-all` for clinic email and contact text.
+    - Updated `.appointment-grid` to full width with optimized mobile card padding (`22px 18px`).
+    - Added `white-space: normal` to `.form-submit-btn` and `overflow-x: clip` to sections, ensuring zero horizontal spillover.
+  - **Approach Pillars 1-Card Slider (Screen 4):**
+    - Converted `#approachPillarsTrack` into a horizontal swipeable slider on mobile (`<=640px`) with 4 distinct pillar cards.
+    - Added circular `←` / `→` arrow buttons (`#approachPhiloPrevBtn`, `#approachPhiloNextBtn`) and 4 active indicator dots (`#approachPhiloCounter`).
+  - **FAQ 1-Card Slider (Screen 3):**
+    - Converted `#faqListTrack` into a horizontal swipeable slider on mobile (`<=640px`) with 8 question cards.
+    - Added circular `←` / `→` arrow buttons (`#faqPrevBtn`, `#faqNextBtn`) and 8 active indicator dots (`#faqCounter`).
+    - Tapping question opens the answer inside the card without disrupting slider scroll.
+  - **Desktop 100% Intact:** All desktop screens (>640px) maintain identical multi-column layout with mobile controls hidden.
+- **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website`, `C:\Users\lenovo\Desktop\MyoPain-Clinic-Website`, and live GitHub repository.
+
 ## 1. Project Overview & Client Context
 - **Clinic Name:** MyoPain Physiotherapy & Wellness Clinic
 - **Client Skill Level:** Beginner (explain all technical actions in simple, plain English; no coding required from the user).

@@ -84,7 +84,12 @@
 
 html, body {
   overflow-x: hidden;
-  max-width: 100vw;
+  max-width: 100%;
+}
+
+main, section, .section {
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 html {
@@ -2810,9 +2815,11 @@ em {
   /* Transform multi-card sections into 1-card swipeable sliders on mobile phones */
   .conditions-grid,
   .approach-pillars-grid,
+  .approach-pillars,
   .journey-timeline,
   .team-grid,
-  .reviews-grid {
+  .reviews-grid,
+  .faq-list {
     display: flex !important;
     flex-direction: row !important;
     overflow-x: auto !important;
@@ -2824,21 +2831,27 @@ em {
     margin-bottom: 6px !important;
     padding-bottom: 6px !important;
     padding-inline: 2px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .conditions-grid::-webkit-scrollbar,
   .approach-pillars-grid::-webkit-scrollbar,
+  .approach-pillars::-webkit-scrollbar,
   .journey-timeline::-webkit-scrollbar,
   .team-grid::-webkit-scrollbar,
-  .reviews-grid::-webkit-scrollbar {
+  .reviews-grid::-webkit-scrollbar,
+  .faq-list::-webkit-scrollbar {
     display: none !important;
   }
 
   .condition-card,
   .approach-pillar-card,
+  .approach-pillar-item,
   .journey-step-card,
   .team-card,
-  .review-placeholder-card {
+  .review-placeholder-card,
+  .faq-item {
     flex: 0 0 100% !important;
     min-width: 100% !important;
     max-width: 100% !important;
@@ -2847,13 +2860,157 @@ em {
     box-sizing: border-box !important;
   }
 
+  /* Specific mobile card enhancements */
+  .approach-callout-card {
+    position: static !important;
+    margin-top: 16px !important;
+    max-width: 100% !important;
+    right: auto !important;
+    bottom: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .approach-pillar-item {
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-lg) !important;
+    padding: 22px 18px !important;
+    box-shadow: var(--shadow-xs) !important;
+  }
+
+  .faq-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .faq-item {
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-xs) !important;
+    overflow: hidden !important;
+  }
+
+  .faq-question-btn {
+    padding: 18px 16px !important;
+    font-size: 0.98rem !important;
+  }
+
+  .faq-answer-panel {
+    padding: 0 16px 18px !important;
+    font-size: 0.9rem !important;
+  }
+
   .details-cta-row .button {
     width: 100%;
     justify-content: center;
   }
 
+  /* Appointment & Contact Alignment & Overflow Fix (Screens 1 & 2) */
+  .appointment-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 22px !important;
+  }
+
+  .clinic-contact-card,
+  .appointment-form-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 22px 18px !important;
+    border-radius: var(--radius-lg) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .contact-detail-items {
+    width: 100% !important;
+    margin-block: var(--space-4) !important;
+  }
+
+  .contact-detail-item {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .contact-detail-text {
+    min-width: 0 !important;
+    flex: 1 1 0% !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .contact-detail-text span,
+  .contact-detail-text a {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    line-height: 1.45 !important;
+  }
+
+  .contact-detail-text a[href^="mailto:"] {
+    word-break: break-all !important;
+    font-size: 0.88rem !important;
+  }
+
+  .hours-box {
+    padding: 14px 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .hours-table {
+    width: 100% !important;
+    font-size: 0.84rem !important;
+  }
+
+  .hours-table td {
+    padding-block: 4px !important;
+    vertical-align: top !important;
+  }
+
+  .whatsapp-direct-prompt {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+
+  .whatsapp-direct-prompt .button {
+    width: 100% !important;
+    justify-content: center !important;
+    white-space: normal !important;
+  }
+
+  .appointment-form {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
   .form-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 0.94rem !important;
+  }
+
+  .form-submit-btn {
+    width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    padding: 14px 18px !important;
+    line-height: 1.35 !important;
+    box-sizing: border-box !important;
   }
 
   .footer-grid {

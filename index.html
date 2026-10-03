@@ -44,7 +44,7 @@
   <meta name="keywords" content="physiotherapy clinic, MyoPain physiotherapy, Dr Neeraj Ruhela, neuro rehabilitation, orthopedic physiotherapy, NIMHANS Bangalore, sports injury rehab, ISO 9001:2015 certified clinic, back pain treatment, cervical spondylosis, stroke rehab, geriatric physiotherapy">
 
   <!-- Primary Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3.7">
+  <link rel="stylesheet" href="style.css?v=3.8">
 
   <!-- Structured Data 1: Local Healthcare Clinic Schema (Google Rich Results) -->
   <script type="application/ld+json">
@@ -875,7 +875,7 @@
             Meaningful rehabilitation begins by listening. Your daily routines, work demands, and personal comfort guide the plan we build together.
           </p>
 
-          <div class="approach-pillars">
+          <div class="approach-pillars" id="approachPillarsTrack">
             <div class="approach-pillar-item">
               <span class="pillar-number">01</span>
               <div class="pillar-content">
@@ -907,6 +907,18 @@
                 <p>We review your response at every visit, safely progressing your exercises as your capacity and confidence improve.</p>
               </div>
             </div>
+          </div>
+
+          <!-- Mobile Slide Navigation for Approach Pillars (Phone Only) -->
+          <div class="mobile-slider-controls mobile-only" id="approachPhiloMobileControls" aria-label="Approach pillars navigation">
+            <button class="slider-arrow-btn" id="approachPhiloPrevBtn" type="button" aria-label="Previous approach pillar">←</button>
+            <div class="slider-counter" id="approachPhiloCounter">
+              <span class="current-dot active" data-index="0"></span>
+              <span class="current-dot" data-index="1"></span>
+              <span class="current-dot" data-index="2"></span>
+              <span class="current-dot" data-index="3"></span>
+            </div>
+            <button class="slider-arrow-btn" id="approachPhiloNextBtn" type="button" aria-label="Next approach pillar">→</button>
           </div>
         </div>
       </div>
@@ -1205,7 +1217,7 @@
         </div>
 
         <div class="faq-wrap">
-          <div class="faq-list" role="region" aria-label="Frequently Asked Questions Accordion">
+          <div class="faq-list" id="faqListTrack" role="region" aria-label="Frequently Asked Questions Accordion">
 
             <!-- FAQ Item 1 -->
             <div class="faq-item">
@@ -1329,6 +1341,22 @@
               </div>
             </div>
 
+          </div>
+
+          <!-- Mobile Slide Navigation for FAQ (Phone Only) -->
+          <div class="mobile-slider-controls mobile-only" id="faqMobileControls" aria-label="FAQ navigation">
+            <button class="slider-arrow-btn" id="faqPrevBtn" type="button" aria-label="Previous question">←</button>
+            <div class="slider-counter" id="faqCounter">
+              <span class="current-dot active" data-index="0"></span>
+              <span class="current-dot" data-index="1"></span>
+              <span class="current-dot" data-index="2"></span>
+              <span class="current-dot" data-index="3"></span>
+              <span class="current-dot" data-index="4"></span>
+              <span class="current-dot" data-index="5"></span>
+              <span class="current-dot" data-index="6"></span>
+              <span class="current-dot" data-index="7"></span>
+            </div>
+            <button class="slider-arrow-btn" id="faqNextBtn" type="button" aria-label="Next question">→</button>
           </div>
         </div>
       </div>
@@ -1666,6 +1694,6 @@
   </button>
 
   <!-- Client-Side JavaScript Logic -->
-  <script src="script.js?v=3.7"></script>
+  <script src="script.js?v=3.8"></script>
 </body>
 </html>

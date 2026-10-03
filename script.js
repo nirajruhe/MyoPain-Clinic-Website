@@ -1708,10 +1708,24 @@ function initMobileCardSliders() {
   );
 
   setupSlider(
+    document.getElementById("approachPillarsTrack"),
+    document.getElementById("approachPhiloPrevBtn"),
+    document.getElementById("approachPhiloNextBtn"),
+    document.getElementById("approachPhiloCounter")
+  );
+
+  setupSlider(
     document.getElementById("reviewsGridTrack"),
     document.getElementById("reviewsPrevBtn"),
     document.getElementById("reviewsNextBtn"),
     document.getElementById("reviewsCounter")
+  );
+
+  setupSlider(
+    document.getElementById("faqListTrack"),
+    document.getElementById("faqPrevBtn"),
+    document.getElementById("faqNextBtn"),
+    document.getElementById("faqCounter")
   );
 
   function setupSlider(track, prevBtn, nextBtn, counter) {
