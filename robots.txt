@@ -1,0 +1,6 @@
+# robots.txt for MyoPain Physiotherapy & Wellness Clinic
+User-agent: *
+Allow: /
+
+# Update domain when deployed
+# Sitemap: https://yourdomain.com/sitemap.xml

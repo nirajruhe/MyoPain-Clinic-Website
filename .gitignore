@@ -1,0 +1,17 @@
+# Dependencies & Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Backup subdirectories
+backup-original/
+backup-session-oct01/
+backup-session-oct03/
+MyoPain-Clinic/
+
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

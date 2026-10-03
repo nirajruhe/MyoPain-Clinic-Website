@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F2EC"/>
+      <stop offset="100%" stop-color="#D5E8DF"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2F6A5F"/>
+      <stop offset="100%" stop-color="#123832"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bgGrad)"/>
+  
+  <!-- Floor line -->
+  <line x1="40" y1="310" x2="600" y2="310" stroke="#BDD6CA" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Ergonomic Desk -->
+  <rect x="220" y="200" width="280" height="14" rx="4" fill="#B58E68"/>
+  <rect x="240" y="214" width="14" height="96" rx="2" fill="#586E6A"/>
+  <rect x="470" y="214" width="14" height="96" rx="2" fill="#586E6A"/>
+  
+  <!-- Monitor with Eye-Level Alignment Guide -->
+  <rect x="370" y="110" width="130" height="85" rx="6" fill="url(#screenGrad)"/>
+  <rect x="380" y="120" width="110" height="65" rx="3" fill="#EBF4F0"/>
+  <!-- UI chart on screen -->
+  <rect x="390" y="130" width="40" height="8" rx="2" fill="#2F6A5F"/>
+  <rect x="390" y="145" width="90" height="4" rx="1" fill="#A8C8BC"/>
+  <rect x="390" y="155" width="70" height="4" rx="1" fill="#A8C8BC"/>
+  <rect x="390" y="165" width="50" height="4" rx="1" fill="#A8C8BC"/>
+  <rect x="425" y="195" width="20" height="15" fill="#586E6A"/>
+  <path d="M410 210 L460 210" stroke="#586E6A" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Ergonomic Chair -->
+  <path d="M150 170 C150 150, 165 140, 185 140 L195 140 C205 140, 210 150, 210 170 L205 235 C205 240, 200 245, 190 245 L165 245 C155 245, 150 240, 150 235 Z" fill="#123832"/>
+  <rect x="155" y="245" width="75" height="18" rx="6" fill="#245047"/>
+  <rect x="187" y="263" width="12" height="35" fill="#4B635F"/>
+  <path d="M155 298 L230 298 M170 306 L215 306" stroke="#4B635F" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="155" cy="304" r="5" fill="#123832"/>
+  <circle cx="230" cy="304" r="5" fill="#123832"/>
+
+  <!-- Ergonomic Posture Alignment Line (Spine angle & Sightline) -->
+  <path d="M192 110 C188 140, 186 170, 185 230" fill="none" stroke="#2F6A5F" stroke-width="3" stroke-dasharray="6,4"/>
+  <line x1="205" y1="105" x2="380" y2="135" stroke="#3E8576" stroke-width="2" stroke-dasharray="4,4"/>
+  
+  <!-- Clinician Consultation Indicator Tag -->
+  <g transform="translate(430, 40)">
+    <rect width="180" height="42" rx="21" fill="#FFFFFF" filter="drop-shadow(0 4px 10px rgba(18,56,50,0.12))"/>
+    <circle cx="22" cy="21" r="13" fill="#E8F3EE"/>
+    <text x="22" y="26" text-anchor="middle" fill="#2F6A5F" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">✓</text>
+    <text x="44" y="20" fill="#123832" font-family="system-ui, sans-serif" font-size="11" font-weight="700">OPTIMAL POSTURE</text>
+    <text x="44" y="32" fill="#586E6A" font-family="system-ui, sans-serif" font-size="9.5">Ergonomic Evaluation</text>
+  </g>
+  
+  <!-- Indoor Plant in Office -->
+  <path d="M545 285 L565 285 L560 310 L550 310 Z" fill="#B58E68"/>
+  <path d="M555 285 Q540 250 535 230 Q548 245 555 285" fill="#3D7A68"/>
+  <path d="M555 285 Q565 240 575 220 Q570 245 555 285" fill="#2F6A5F"/>
+  <path d="M555 285 Q555 235 555 210 Q560 235 555 285" fill="#5AA690"/>
+</svg>
