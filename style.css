@@ -423,6 +423,21 @@ em {
   color: #79d4be;
 }
 
+.top-banner-location-link {
+  color: #cce0d8;
+  text-decoration: underline;
+  text-decoration-color: rgba(121, 212, 190, 0.45);
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.top-banner-location-link:hover {
+  color: #79d4be;
+  text-decoration-color: #79d4be;
+}
+
 .top-banner-link.top-banner-wa {
   background: rgba(37, 211, 102, 0.15);
   color: #a7f3d0;
@@ -2693,25 +2708,38 @@ em {
   }
 
   .approach-grid {
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0 !important;
+    gap: var(--space-6) !important;
   }
 
   .approach-media-wrap {
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0 !important;
     margin-inline: auto !important;
   }
 
   .approach-image-frame {
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .approach-copy {
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .approach-pillars {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .top-banner-wrap {
