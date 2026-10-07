@@ -1,6 +1,6 @@
 # Project Memory & Knowledge Base: MyoPain Physiotherapy & Wellness Clinic
 
-Last Updated: October 04, 2026
+Last Updated: October 07, 2026
 
 ---
 
@@ -221,6 +221,20 @@ Last Updated: October 04, 2026
   - Zero changes to services, carousel logic, swipe behavior, arrow buttons, booking system, WhatsApp, phone links, Google Maps navigation, SEO, schema, navigation, team, or FAQ.
   - All automated tests passing: `test_sliders.js` (14/14), `test_new_fixes.js` (17/17), and `verify_booking.js` (4/4) — 35/35 checks passing.
   - Cache-busting version bumped to `v=4.5`.
+- **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website` and live GitHub repository.
+
+## 1Q. Professional Developer Attribution in Footer (October 07, 2026)
+- **Task Scope:** Added a discreet, elegant developer credit for **NAG INTELLIGENCE SOLUTIONS** at the very bottom of the website footer.
+- **Visual Design & Typography:**
+  - Placed at the very end of the `.footer-bottom` legal and copyright strip (`.footer-developer-credit`).
+  - Features a delicate, semi-transparent hairline divider (`border-top: 1px solid rgba(255, 255, 255, 0.08)`).
+  - Wording: `Developed by NAG INTELLIGENCE SOLUTIONS`.
+  - Typography: Subtle, small font (`0.72rem`) in slate teal (`#7f9992`) matching the legal notice, with company name in soft mint (`#cde2d8`, font-weight 600, letter-spacing 0.04em) that shifts to crisp white on hover.
+  - Full-width centered layout on both desktop and mobile, acting as a clean, balanced closing signature at the very bottom of the webpage.
+- **Non-Interference Guarantee:**
+  - 100% preservation of all existing content, doctor profiles, clinical services, carousel slider, booking workflow, WhatsApp links, phone links, Google Maps GPS navigation, and mobile sliders.
+  - Cache-busting version bumped to `v=4.6`.
+- **Automated Verification:** All 3 test suites passing (37/37 checks).
 - **Synchronized Locations:** Maintained across `D:\MyoPain-Clinic-Website` and live GitHub repository.
 
 ## 1. Project Overview & Client Context

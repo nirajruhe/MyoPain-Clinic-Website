@@ -2529,6 +2529,28 @@ em {
   color: #ffffff;
 }
 
+.footer-developer-credit {
+  width: 100%;
+  padding-top: 14px;
+  margin-top: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.72rem;
+  color: #7f9992;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.footer-developer-credit .developer-name {
+  color: #cde2d8;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: color var(--transition-fast);
+}
+
+.footer-developer-credit:hover .developer-name {
+  color: #ffffff;
+}
+
 /* --------------------------------------------------------------------------
    19. BACK TO TOP BUTTON
    -------------------------------------------------------------------------- */
